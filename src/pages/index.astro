@@ -1,16 +1,98 @@
 ---
-
+import PortfolioLayout from '../layouts/PortfolioLayout.astro';
+import Navigation from '../components/Navigation.vue';
+import ProfilePanel from '../components/ProfilePanel.vue';
+import ExperienceSection from '../components/ExperienceSection.vue';
+import QualificationsSection from '../components/QualificationsSection.vue';
+import ProjectsSection from '../components/ProjectsSection.vue';
+import '../styles/global.css';
+import TopPad from '../components/TopPad.vue';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<PortfolioLayout title="Safwan Zarif | Software Developer Portfolio">
+  <!-- Profile Panel (Fixed Left) -->
+  <ProfilePanel client:load />
+  
+  <!-- Navigation (Sticky Top) -->
+  <Navigation client:load />
+  
+  <!-- Main Content -->
+  <main class="lg:ml-80">
+    <TopPad client:load />
+    <ExperienceSection client:load />
+    <QualificationsSection client:load />
+    <ProjectsSection client:load />
+  </main>
+
+  <!-- Enhanced Scroll Animation Script -->
+  <script>
+    // Enhanced Intersection Observer for bidirectional animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const element = entry.target;
+        const hasReverse = element.dataset.scrollReverse === 'true';
+        
+        if (entry.isIntersecting) {
+          // Element is entering viewport - animate in
+          const animation = element.dataset.scrollAnimation;
+          
+          // Apply delay if specified
+          if (animation && animation.startsWith('delay-')) {
+            const delay = parseInt(animation.split('-')[1]);
+            element.style.setProperty('--delay', `${delay}ms`);
+          }
+          
+          element.classList.remove('animate-out');
+          element.classList.add('animate-in');
+          
+          // If reverse is disabled, stop observing
+          if (!hasReverse) {
+            observer.unobserve(element);
+          }
+        } else if (hasReverse) {
+          // Element is leaving viewport and reverse is enabled - animate out
+          element.classList.remove('animate-in');
+          element.classList.add('animate-out');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all elements with scroll animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const animatedElements = document.querySelectorAll('[data-scroll-animation]');
+      animatedElements.forEach(el => observer.observe(el));
+    });
+
+    // Parallax effect for sections
+    let ticking = false;
+    
+    function updateParallax() {
+      const scrolled = window.pageYOffset;
+      const sections = document.querySelectorAll('section');
+      
+      sections.forEach((section, index) => {
+        const rate = scrolled * -0.5;
+        const bgElements = section.querySelectorAll('.absolute.inset-0');
+        bgElements.forEach(bg => {
+          bg.style.transform = `translateY(${rate}px)`;
+        });
+      });
+      
+      ticking = false;
+    }
+
+    function requestTick() {
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener('scroll', requestTick);
+  </script>
+</PortfolioLayout>
