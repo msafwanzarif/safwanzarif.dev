@@ -23,70 +23,96 @@ export const portfolioConfig = {
 
   // Core Skills (shown in profile panel)
   coreSkills: [
-    "Node.js","Nest.js", "Vue.js", "React", 
+    "Node.js","Nest.js", "Vue", "React", 
     "MySQL", "MongoDB", "Python", "AWS"
   ],
 
   // Work Experience
   experiences: [
     {
-      title: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
-      duration: "2022 - Present",
-      description: "Led a team of 5 developers in building scalable web applications using modern JavaScript frameworks. Implemented CI/CD pipelines and improved application performance by 40%.",
-      technologies: ["Vue.js", "Node.js", "PostgreSQL", "Docker", "AWS", "TypeScript"]
+      title: "Software Application Specialist",
+      company: "iLaunch Sdn Bhd, Shah Alam",
+      duration: "February 2022 – Present",
+      descriptions: [
+        "Developed solutions for a <b>feedback management system</b> and a professional board's <b>forms and financial management system</b>, ensuring they meet web and mobile applications requirements",
+        "Researched and developed solutions for <b>new feature requests</b>, including <b>custom implementations</b> and <b>third-party integrations</b>, and presented findings and proposals to team members",
+        "Collaborated with project managers and analysts to <b>design effective data structures and UX approaches</b> for specific requirements, while actively identifying and discussing potential risks",
+        "<b>Conducted a web development workshop as a trainer</b>, introducing the technologies used in our projects to the client",
+      ],
+      technologies: ["Vue", "Nest.js", "MySQL", "Spring", "Oracle DB", "Flutter", "SVN", "TypeScript","Java", "Dart", "Bootstrap", "NGINX"]
     },
     {
-      title: "Frontend Developer",
-      company: "Digital Innovations Ltd",
-      duration: "2020 - 2022",
-      description: "Developed responsive web applications and mobile-first interfaces. Collaborated with UX designers to create intuitive user experiences and implemented modern CSS frameworks.",
-      technologies: ["React", "JavaScript", "SASS", "Redux", "Webpack", "Jest"]
+      title: "Interns Supervisor",
+      company: "iLaunch Sdn Bhd, Shah Alam",
+      duration: "March 2022 – April 2025",
+      descriptions: [
+        "Guided and managed <b>multiple groups of internship students</b> from various local universities throughout their training period",
+        "Trained them on the <b>complete application development workflow</b>, including requirements gathering, full-stack development, testing, debugging, and deployment",
+        "Assigned <b>real project tasks</b> and facilitated team progress using <b>agile methods</b>, ensuring hands-on experience while <b>supporting effective collaboration and timely milestone completion</b>"
+      ],
+      technologies: ["Vue", "Node.js", "Nest.js", "Flutter", "MySQL", "JIRA", "Notion", "Insomnia", "Netlify", "DigitalOcean", "SVN", "Bootstrap", "TypeScript", "Dart"]
     },
     {
-      title: "Junior Developer",
-      company: "StartupXYZ",
-      duration: "2019 - 2020",
-      description: "Started my professional journey building web applications from scratch. Gained experience in full-stack development and agile methodologies.",
-      technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Bootstrap"]
+      title: "Technical Team Lead",
+      company: "Azure Innovations Sdn Bhd, Kuala Lumpur",
+      duration: "April 2021 – January 2022",
+      descriptions: [
+        "Led a team of <b>multinational developers</b> in delivering new features and requirements while maintaining a suite of web and mobile applications for a <b>major Malaysian telco company</b>",
+        "Reviewed and designed solutions involving <b>e-commerce implementation</b>, <b>ads and reward system</b>, <b>Buy Now Pay Later implementation</b> and <b>courier service integration</b>",
+        "Collaborated closely with Project Managers to manage client technical requests and expectations, <b>providing effort estimations and risk analysis</b>",
+      ],
+      technologies: ["Node.js", "Laravel", "React", "React Native", "MySQL", "MongoDB","Postman","JIRA","AWS","Javascript","PHP","Bootstrap","IPay88"]
+    },
+    {
+      title: "Backend Developer",
+      company: "Azure Innovations Sdn Bhd, Kuala Lumpur",
+      duration: "March 2020 – March 2021",
+      descriptions: [
+        "Focused on <b>data management and computation</b> for an inventory and content management system tailored for <b>B2B clients</b>",
+        "Handled <b>on-call reports and incidents response</b>, providing prompt analysis and coming up with effective debugging strategy to be implemented"
+      ],
+      technologies: ["Laravel", "Node.js", "MySQL", "MongoDB", "Postman", "JIRA", "PHP", "Javascript"]
     }
   ],
 
   // Education
   education: [
     {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "University of Technology",
-      year: "2015 - 2019",
-      description: "Focused on software engineering, algorithms, and data structures. Graduated Magna Cum Laude with honors."
+      degree: "Bachelor of Computer Science (Hons.) Specializing in Information System",
+      institution: "Multimedia University, Cyberjaya",
+      year: "2016 - 2020",
+      result:"CGPA : 3.71",
+      description: "Won Best Final Year Project. Focused on elective subjects with technical application including Artificial Intelligence, Algorithm, Compiler Design and Data Mining."
     },
     {
-      degree: "Full Stack Web Development Bootcamp",
-      institution: "Code Academy Pro",
-      year: "2019",
-      description: "Intensive 12-week program covering modern web development technologies and best practices."
+      degree: "International Baccalaureate (Engineering)",
+      institution: "MARA College, Banting",
+      result:"IB SCORE : 35",
+      year: "2013",
+      description: ""
+    },
+    {
+      degree: "Sijil Pelajaran Malaysia (SPM)",
+      institution: "SMS Selangor, Cheras",
+      result:"6A+ 3A",
+      year: "2010",
+      description: ""
     }
   ],
 
   // Certifications
   certifications: [
     {
-      name: "AWS Certified Solutions Architect",
+      name: "AWS Certified Solution Architect - Associate",
       issuer: "Amazon Web Services",
-      year: "2023",
+      year: "2022",
       skills: ["Cloud Architecture", "AWS Services", "Security", "Scalability"]
     },
     {
-      name: "Google Cloud Professional Developer",
-      issuer: "Google Cloud",
-      year: "2022",
-      skills: ["GCP", "Kubernetes", "DevOps", "Microservices"]
-    },
-    {
-      name: "Microsoft Azure Fundamentals",
+      name: "Microsoft Certified: Azure Fundamentals",
       issuer: "Microsoft",
       year: "2022",
-      skills: ["Azure Services", "Cloud Computing", "DevOps"]
+      skills: ["Azure Services", "Cloud Computing"]
     }
   ],
 
@@ -137,87 +163,26 @@ export const portfolioConfig = {
   // Featured Projects
   projects: [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.",
+      title: "Smart Parking System",
+      description: "Final Year Project that Won Best Project in 2019. Designed a parking system that focus on Real Time Parking Map Status Display in collaboration with TM One",
       icon: "🛒",
+      image: "", // Add your project screenshot here
+      status: "Archived",
+      technologies: ["Expo", "React Native", "Node.js", "PostgreSQL","Heroku"],
+      githubUrl: "https://github.com/msafwanzarif/fypv0",
+      
+    },
+    {
+      title: "FOKUS",
+      description: "Personal Timer with minimal design that aims to boost productivity. Based on Pomodoro Timer with more flexibility that cater to users' habits and behaviour",
+      icon: "Car",
+      image: "projects/image.png", // Add your project screenshot here
       status: "Live",
-      technologies: ["Vue.js", "Node.js", "PostgreSQL", "Stripe", "Docker"],
-      liveUrl: "https://ecommerce-demo.com",
-      githubUrl: "https://github.com/safwanzarif/ecommerce-platform",
-      stats: {
-        users: "2.5K",
-        orders: "10K+",
-        uptime: "99.9%"
-      }
+      technologies: ["Vue","Tauri","Bootstrap","Netlify"],
+      liveUrl: "https://fokus.safwanzarif.dev",
+      githubUrl: "https://github.com/msafwanzarif/fokus-masa-anda",
+      
     },
-    {
-      title: "Task Management App",
-      description: "Collaborative project management tool with real-time updates, team chat, and advanced reporting features.",
-      icon: "📋",
-      status: "Live",
-      technologies: ["React", "Firebase", "Material-UI", "Socket.io"],
-      liveUrl: "https://taskmanager-demo.com",
-      githubUrl: "https://github.com/safwanzarif/task-manager",
-      stats: {
-        teams: "150+",
-        tasks: "5K+",
-        active: "24/7"
-      }
-    },
-    {
-      title: "Weather Analytics Dashboard",
-      description: "Data visualization platform for weather patterns with predictive analytics and interactive charts.",
-      icon: "🌤️",
-      status: "Beta",
-      technologies: ["Python", "FastAPI", "D3.js", "PostgreSQL", "ML"],
-      liveUrl: "https://weather-analytics.com",
-      githubUrl: "https://github.com/safwanzarif/weather-dashboard",
-      stats: {
-        cities: "1K+",
-        accuracy: "94%",
-        data: "Real-time"
-      }
-    },
-    {
-      title: "Social Media Scheduler",
-      description: "Multi-platform social media management tool with content planning, analytics, and automation features.",
-      icon: "📱",
-      status: "Development",
-      technologies: ["Nuxt.js", "Express", "MongoDB", "Redis", "APIs"],
-      githubUrl: "https://github.com/safwanzarif/social-scheduler",
-      stats: {
-        platforms: "6",
-        posts: "∞",
-        scheduling: "Auto"
-      }
-    },
-    {
-      title: "AI Code Assistant",
-      description: "VS Code extension that provides intelligent code suggestions and automated refactoring using machine learning.",
-      icon: "🤖",
-      status: "Live",
-      technologies: ["TypeScript", "VS Code API", "OpenAI", "Webpack"],
-      liveUrl: "https://marketplace.visualstudio.com/items?itemName=safwanzarif.ai-assistant",
-      githubUrl: "https://github.com/safwanzarif/ai-code-assistant",
-      stats: {
-        downloads: "10K+",
-        rating: "4.8★",
-        updates: "Weekly"
-      }
-    },
-    {
-      title: "Blockchain Voting System",
-      description: "Secure and transparent voting platform built on Ethereum with smart contracts and decentralized storage.",
-      icon: "🗳️",
-      status: "Research",
-      technologies: ["Solidity", "Web3.js", "IPFS", "React", "Ethereum"],
-      githubUrl: "https://github.com/safwanzarif/blockchain-voting",
-      stats: {
-        security: "100%",
-        transparency: "Full",
-        cost: "Low"
-      }
-    }
   ]
 };
 

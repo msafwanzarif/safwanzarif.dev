@@ -1,5 +1,5 @@
 <template>
-  <nav id="navBar" class="fixed top-0 right-0 left-0 lg:left-80 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-30 border-b border-gray-200 dark:border-gray-800">
+  <nav id="navBar" class="fixed top-0 right-0 left-0 lg:left-96 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-30 border-b border-gray-200 dark:border-gray-800">
     <div class="px-6 py-4">
       <div class="flex items-center justify-between">
         <!-- Mobile menu button -->

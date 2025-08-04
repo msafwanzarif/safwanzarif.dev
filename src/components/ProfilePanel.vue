@@ -1,17 +1,17 @@
 <template>
-  <div class="fixed left-0 top-0 h-full w-80 bg-white dark:bg-gray-900 shadow-xl z-40 hidden lg:block">
+  <div class="fixed left-0 top-0 h-full w-96 bg-white dark:bg-gray-900 shadow-xl z-40 hidden lg:block overflow-y-auto">
     <!-- Profile Image -->
     <div class="flex flex-col h-full items-center justify-center text-center">
-      <div class="px-8 py-4 text-center">
-        <div class="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-dev-accent to-sewing-tin-accent mb-4 flex items-center justify-center text-white text-4xl font-bold">
+      <div class="px-8 py-4  text-center">
+        <div class="w-28 h-28 2xl:w-40 2xl:h-40 mx-auto rounded-full bg-gradient-to-br from-dev-accent to-sewing-tin-accent mb-4 flex items-center justify-center text-white text-4xl font-bold">
           {{ initials }}
         </div>
-        <h2 class="text-2xl font-bold mb-2">{{ config.personal.name }}</h2>
-        <p class="text-xl text-gray-600 dark:text-gray-400 mb-2">{{ config.personal.title }}</p>
-        <div class="flex items-center justify-center mb-4">
-          <i class="bi bi-geo-alt-fill"></i> <span class="text-sm ms-2">{{ config.personal.location }}</span>
+        <h2 class="text-xl 2xl:text-2xl font-bold mb-2 text-dev-accent">{{ config.personal.name }}</h2>
+        <p class="text-base 2xl:text-xl text-gray-600 dark:text-gray-400 mb-2">{{ config.personal.title }}</p>
+        <div class="flex items-center justify-center mb-4 text-xs 2xl:text-sm">
+          <i class="bi bi-geo-alt-fill"></i> <span class=" ms-2">{{ config.personal.location }}</span>
         </div>
-        <p class="text-sm text-gray-500 dark:text-gray-500 leading-relaxed" v-html="config.personal.bio"></p>
+        <p class="2xl:mt-12 text-xs 2xl:text-sm text-gray-500 dark:text-gray-500 leading-relaxed" v-html="config.personal.bio"></p>
       </div>
       <!-- Contact Info -->
       <div class="px-8">
@@ -30,20 +30,20 @@
           </div>
         </div> -->
         <!-- Social Links -->
-        <div class="flex items-center justify-center space-x-3">
+        <div class="flex items-center justify-center space-x-3 2xl:mb-12">
           <a v-for="social in config.socialLinks" :key="social.platform"
              :href="social.url" target="_blank" :download="social.platform === 'resume'?fileName : null"
-             class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-500 flex items-center justify-center hover:bg-dev-accent hover:text-white transition-colors">
-            <i :class="social.icon"></i>
+             class="w-8 h-8 2xl:w-12 2xl:h-12 rounded-full bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-500  flex items-center justify-center text-dev-accent hover:bg-dev-accent hover:text-white transition-colors">
+            <i :class="social.icon" class="text-sm 2xl:text-xl "></i>
           </a>
         </div>
       </div>
       <!-- Skills -->
-      <div class="px-8 pt-8">
-        <h3 class="font-semibold mb-4">Core Skills</h3>
+      <div class="px-8 pt-5">
+        <h3 class="font-semibold mb-4 text-md 2xl:text-lg">Core Skills</h3>
         <div class="flex flex-wrap gap-2 justify-center">
           <span v-for="skill in config.coreSkills" :key="skill"
-                class="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-xs">
+                class="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-[0.625rem] 2xl:text-xs text-dev-accent">
             {{ skill }}
           </span>
         </div>

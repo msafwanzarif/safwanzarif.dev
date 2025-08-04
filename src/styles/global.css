@@ -10,6 +10,14 @@ html.dark {
   @apply bg-dev-bg text-dev-text;
 }
 
+.dark .text-gray-600 b{
+  @apply text-gray-300
+}
+
+.dark .text-gray-500 b{
+  @apply text-gray-400
+}
+
 /* Scroll Animations */
 @keyframes fadeInUp {
   from {

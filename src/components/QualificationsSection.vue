@@ -11,13 +11,10 @@
       <div class="text-center mb-16" data-scroll-animation="fade-up" data-scroll-reverse="true">
         <h2 class="text-4xl lg:text-6xl font-bold mb-6">
           Education &
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-sewing-tin-accent to-dev-accent">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-sewing-tin-accent dark:from-dev-text dark:to-dev-accent to-dev-accent">
             Certifications
           </span>
         </h2>
-        <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Continuous learning and professional development in cutting-edge technologies
-        </p>
       </div>
 
       <div class="max-w-6xl mx-auto">
@@ -25,16 +22,17 @@
           <!-- Education -->
           <div data-scroll-animation="slide-right" data-scroll-reverse="true">
             <h3 class="text-2xl font-bold mb-8 flex items-center">
-              <span class="w-8 h-8 bg-dev-accent rounded-full flex items-center justify-center text-white text-sm mr-3">🎓</span>
+              <span class="w-8 h-8 bg-gray-100 dark:bg-gray-800 border rounded-full flex items-center justify-center text-base mr-3"><i class="bi bi-mortarboard"></i></span>
               Education
             </h3>
             <div class="space-y-6">
               <div v-for="(edu, index) in config.education" :key="index" 
                    class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <h4 class="text-xl font-bold mb-2">{{ edu.degree }}</h4>
-                <p class="text-dev-accent font-semibold mb-2">{{ edu.institution }}</p>
+                <h4 class="text-lg 2xl:text-xl font-bold mb-2">{{ edu.degree }}</h4>
+                <p class="text-dev-accent font-semibold text-sm 2xl:text-base mb-2">{{ edu.institution }}</p>
                 <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">{{ edu.year }}</p>
-                <p class="text-gray-700 dark:text-gray-300">{{ edu.description }}</p>
+                <p class="text-gray-700 dark:text-gray-300 mb-2 text-sm 2xl:text-base"><b>{{ edu.result }}</b></p>
+                <p class="text-gray-700 dark:text-gray-300 text-sm 2xl:text-base">{{ edu.description }}</p>
               </div>
             </div>
           </div>
@@ -42,18 +40,18 @@
           <!-- Certifications -->
           <div data-scroll-animation="slide-left" data-scroll-reverse="true">
             <h3 class="text-2xl font-bold mb-8 flex items-center">
-              <span class="w-8 h-8 bg-sewing-tin-accent rounded-full flex items-center justify-center text-white text-sm mr-3">🏆</span>
+              <span class="w-8 h-8 bg-gray-100 dark:bg-gray-800 border rounded-full flex items-center justify-center text-base mr-3"><i class="bi bi-patch-check"></i></span>
               Certifications
             </h3>
             <div class="space-y-6">
               <div v-for="(cert, index) in config.certifications" :key="index" 
                    class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <h4 class="text-xl font-bold mb-2">{{ cert.name }}</h4>
-                <p class="text-sewing-tin-accent font-semibold mb-2">{{ cert.issuer }}</p>
+                <p class="text-dev-accent font-semibold mb-2">{{ cert.issuer }}</p>
                 <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">{{ cert.year }}</p>
                 <div class="flex flex-wrap gap-2">
                   <span v-for="skill in cert.skills" :key="skill"
-                        class="px-3 py-1 bg-sewing-tin-accent/10 text-sewing-tin-accent rounded-full text-sm">
+                        class="px-3 py-1 bg-sewing-tin-accent/10 text-dev-accent rounded-full text-sm">
                     {{ skill }}
                   </span>
                 </div>
