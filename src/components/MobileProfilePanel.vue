@@ -2,8 +2,8 @@
   <!-- Mobile Profile Panel (Hidden by default, shown when menu is toggled) -->
   <div class="bg-black/50 z-50 lg:hidden" id="profile">
     <div
-      class="h-full w-full bg-white dark:bg-gray-900 shadow-xl transform transition-transform duration-300 min-h-[92vh]">
-      <div class="flex flex-col h-full items-center text-center pt-[10vh]" data-scroll-animation="fade-up" data-scroll-reverse="true">
+      class="h-full w-full bg-white dark:bg-gray-900 shadow-xl transform transition-transform duration-300 min-h-[92svh]">
+      <div class="flex flex-col h-full items-center text-center pt-[1.5svh]" data-scroll-animation="fade-up" data-scroll-reverse="true">
 
         <!-- Profile Content (Same as desktop) -->
         <div class="p-8 text-center">
@@ -54,7 +54,7 @@
         </div>
 
         <!-- Skills -->
-        <div class="px-8 pt-8 mt-5">
+        <div class="px-8 pt-8 mt-2">
           <h3 class="font-semibold mb-4">Core Skills</h3>
           <div class="flex flex-wrap gap-2 justify-center">
             <span v-for="skill in config.coreSkills" :key="skill"
