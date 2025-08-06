@@ -40,7 +40,6 @@
           <div class="flex items-center justify-center space-x-3 mt-4">
             <a v-for="social in config.socialLinks" :key="social.platform" :href="social.url" target="_blank"
               :download="social.platform === 'resume' ? fileName : null"
-              :title="social.platform === 'resume' ? 'Download Resume' : `Visit my ${social.platform}`"
               class="relative w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-500  flex items-center justify-center text-dev-accent hover:bg-dev-accent hover:text-white transition-colors group">
               <i :class="social.icon" class="text-xl"></i>
               
