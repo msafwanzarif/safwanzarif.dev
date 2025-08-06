@@ -172,25 +172,6 @@ const toggleFuturePlans = (projectIndex) => {
   }
 }
 
-// Handle image loading errors
-const handleImageError = (event) => {
-  // Hide the broken image and show fallback icon
-  const img = event.target
-  const container = img.parentElement
-  img.style.display = 'none'
-  
-  // Create fallback icon element
-  const fallback = document.createElement('div')
-  fallback.className = 'text-6xl opacity-60'
-  fallback.textContent = container.closest('[data-scroll-animation]').querySelector('h3').textContent.includes('E-Commerce') ? '🛒' : 
-                         container.closest('[data-scroll-animation]').querySelector('h3').textContent.includes('Task') ? '📋' :
-                         container.closest('[data-scroll-animation]').querySelector('h3').textContent.includes('Weather') ? '🌤️' :
-                         container.closest('[data-scroll-animation]').querySelector('h3').textContent.includes('Social') ? '📱' :
-                         container.closest('[data-scroll-animation]').querySelector('h3').textContent.includes('AI') ? '🤖' :
-                         container.closest('[data-scroll-animation]').querySelector('h3').textContent.includes('Blockchain') ? '🗳️' : '📁'
-  
-  container.appendChild(fallback)
-}
 
 // Initialize scroll animations
 onMounted(() => {

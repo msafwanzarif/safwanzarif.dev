@@ -30,11 +30,18 @@
           </div>
         </div> -->
         <!-- Social Links -->
-        <div class="flex items-center justify-center space-x-3 2xl:mb-12">
+        <div class="flex items-center justify-center space-x-3 2xl:my-8">
           <a v-for="social in config.socialLinks" :key="social.platform"
              :href="social.url" target="_blank" :download="social.platform === 'resume'?fileName : null"
-             class="w-8 h-8 2xl:w-12 2xl:h-12 rounded-full bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-500  flex items-center justify-center text-dev-accent hover:bg-dev-accent hover:text-white transition-colors">
+             :title="social.platform === 'resume' ? 'Download Resume' : `Visit my ${social.platform}`"
+             class="relative w-8 h-8 2xl:w-12 2xl:h-12 rounded-full bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-500  flex items-center justify-center text-dev-accent hover:bg-dev-accent hover:text-white transition-colors group">
             <i :class="social.icon" class="text-sm 2xl:text-xl "></i>
+            
+            <!-- Tooltip -->
+            <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 dark:bg-gray-700 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
+              {{ social.platform === 'resume' ? 'Download Resume' : social.platform }}
+              <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-gray-900 dark:border-t-gray-700"></div>
+            </div>
           </a>
         </div>
       </div>
