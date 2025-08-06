@@ -18,14 +18,14 @@
       </div>
 
       <div class="max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-2 2xl:grid-cols-3 gap-8">
+        <div class="grid 2xl:grid-cols-2 gap-8 items-start">
           <div v-for="(project, index) in config.projects" :key="index" 
-               class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+               class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col"
                :data-scroll-animation="`fade-up-${index % 3}`"
                data-scroll-reverse="true">
             
             <!-- Project Image/Preview -->
-            <div class="relative h-48 bg-gradient-to-br from-dev-accent/20 to-sewing-tin-accent/20 flex items-center justify-center overflow-hidden">
+            <div class="relative h-64 bg-gradient-to-br from-dev-accent/20 to-sewing-tin-accent/20 flex items-center justify-center overflow-hidden">
               <!-- Project Image -->
               <img v-if="project.image" 
                    :src="project.image" 
@@ -51,26 +51,72 @@
             </div>
 
             <!-- Project Content -->
-            <div class="p-6">
-              <div class="flex items-center justify-between mb-3">
-                <h3 class="text-xl font-bold group-hover:text-dev-accent transition-colors">
-                  {{ project.title }}
-                </h3>
-                <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs font-medium">
-                  {{ project.status }}
-                </span>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex-1">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-xl 2xl:text-2xl font-bold group-hover:text-dev-accent transition-colors">
+                    {{ project.title }}
+                  </h3>
+                  <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs 2xl:text-sm font-medium">
+                    {{ project.status }}
+                  </span>
+                </div>
+                
+                <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed 2xl:text-lg">
+                  {{ project.description }}
+                </p>
+                <!-- Collapsible Features Section -->
+                <div>
+                  <button
+                    @click="toggleFeatures(index)"
+                    class="flex items-center justify-between w-full text-left text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-dev-accent transition-colors mb-3">
+                    <span>Key Features ({{ project.features?.length || 0 }})</span>
+                    <i :class="expandedProjects.has(index) ? 'bi bi-chevron-up' : 'bi bi-chevron-down'"
+                       class="text-dev-accent transition-transform duration-200"></i>
+                  </button>
+                
+                  <div
+                    class="overflow-hidden transition-all duration-300 ease-in-out"
+                    :class="expandedProjects.has(index) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'">
+                    <ul class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm 2xl:text-base space-y-2 mb-4">
+                      <li v-for="feature in project.features" :key="feature" class="flex items-start">
+                        <span class="text-dev-accent mr-2 mt-0">•</span>
+                        <span v-html="feature"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Collapsible Future Plans Section -->
+                <div v-if="project.futurePlans && project.futurePlans.length > 0" >
+                  <button
+                    @click="toggleFuturePlans(index)"
+                    class="flex items-center justify-between w-full text-left text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-sewing-tin-accent transition-colors mb-3">
+                    <span>Future Plans ({{ project.futurePlans?.length || 0 }})</span>
+                    <i :class="expandedFuturePlans.has(index) ? 'bi bi-chevron-up' : 'bi bi-chevron-down'"
+                       class="text-sewing-tin-accent transition-transform duration-200"></i>
+                  </button>
+                
+                  <div
+                    class="overflow-hidden transition-all duration-300 ease-in-out"
+                    :class="expandedFuturePlans.has(index) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'">
+                    <ul class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm 2xl:text-base space-y-2 mb-4">
+                      <li v-for="plan in project.futurePlans" :key="plan" class="flex items-start">
+                        <span class="text-sewing-tin-accent mr-2 mt-0">◦</span>
+                        <span v-html="plan"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               
-              <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                {{ project.description }}
-              </p>
-              
-              <!-- Tech Stack -->
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span v-for="(tech,index) in project.technologies" :key="index"
-                      class="px-2 py-1 bg-dev-accent/10 text-dev-accent rounded text-xs font-medium">
-                  {{ tech }}
-                </span>
+              <!-- Tech Stack - Aligned to bottom -->
+              <div class="mt-auto pt-4">
+                <div class="flex flex-wrap gap-2">
+                  <span v-for="(tech,index) in project.technologies" :key="index"
+                        class="px-2 py-1 bg-dev-accent/10 text-dev-accent rounded text-xs font-medium">
+                    {{ tech }}
+                  </span>
+                </div>
               </div>
 
               <!-- Project Stats -->
@@ -87,13 +133,13 @@
         <!-- Additional Projects CTA -->
         <div class="text-center mt-16" data-scroll-animation="fade-up" data-scroll-reverse="true">
           <p class="text-gray-600 dark:text-gray-400 mb-6">
-            Interested in seeing more of my work?
+            I'm still working on this page — <span class="text-dev-accent">more project showcases and fun facts about me</span> are on the way! 🚀👨‍💻
           </p>
-          <a :href="config.socialLinks.github" target="_blank"
+          <!-- <a :href="config.socialLinks.github" target="_blank"
              class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-dev-accent to-sewing-tin-accent text-white rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105">
             <span class="mr-2">📁</span>
             View All Projects on GitHub
-          </a>
+          </a> -->
         </div>
       </div>
     </div>
@@ -101,10 +147,30 @@
 </template>
 
 <script setup>
-import { computed, onMounted } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import portfolioConfig from '../config/portfolio.js'
 
 const config = computed(() => portfolioConfig)
+const expandedProjects = ref(new Set())
+const expandedFuturePlans = ref(new Set())
+
+// Toggle features visibility for a specific project
+const toggleFeatures = (projectIndex) => {
+  if (expandedProjects.value.has(projectIndex)) {
+    expandedProjects.value.delete(projectIndex)
+  } else {
+    expandedProjects.value.add(projectIndex)
+  }
+}
+
+// Toggle future plans visibility for a specific project
+const toggleFuturePlans = (projectIndex) => {
+  if (expandedFuturePlans.value.has(projectIndex)) {
+    expandedFuturePlans.value.delete(projectIndex)
+  } else {
+    expandedFuturePlans.value.add(projectIndex)
+  }
+}
 
 // Handle image loading errors
 const handleImageError = (event) => {

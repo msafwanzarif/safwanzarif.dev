@@ -10,7 +10,7 @@
         </button>
 
         <!-- Logo/Name for mobile -->
-        <div class="lg:hidden">
+        <div class="lg:hidden" @click="toggleShowMobileProfile()">
           <h1 class="text-lg font-bold">{{ config.personal.name }}</h1>
         </div>
 
@@ -32,6 +32,9 @@
     <!-- Mobile Menu -->
     <div v-show="mobileMenuOpen" class="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
       <div class="px-6 py-4 space-y-2">
+        <a class="block py-2 text-sm font-medium hover:text-dev-accent transition-colors cursor-pointer" @click="toggleShowMobileProfile()">
+          My Profile
+        </a>
         <a v-for="section in sections" :key="section.id"
            @click="scrollToSection(section.id); mobileMenuOpen = false"
            class="block py-2 text-sm font-medium hover:text-dev-accent transition-colors cursor-pointer"
@@ -71,8 +74,8 @@ function toggleMobileMenu() {
   mobileMenuOpen.value = !mobileMenuOpen.value;
 }
 
-function toggleMobileProfile() {
-  showMobileProfile.value = !showMobileProfile.value;
+function toggleShowMobileProfile() {
+  showMobileProfile.value = true
 }
 
 function getNavBarHeight() {
