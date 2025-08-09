@@ -162,6 +162,33 @@ export const portfolioConfig = {
   // Featured Projects
   projects: [
     {
+      title: "Conteng | Papan Putih Untuk Cikgu",
+      description: "A Live whiteboard for any teachers or tutors that conduct classes using a digital whiteboard. Packed with features that will enhance students engagement as well as teachers' ability to monitor their  progress",
+      features:[
+        "Automatic access control that separate the teacher and students ability to modify the board.",
+        "Easy and intuitive UX for teacher to manage their pupils. Allow a pupil to write with one click of a button.",
+        "Students will not be able to disrupt the teacher or any other students' work with granular control.",
+        "'Exercise' mode at any state of the board. Instantly duplicating the board for each student, allowing them to write on their own space.",
+        "Ability to save and load the board state.",
+        "Add a grid to the board for easier drawing.",
+        "Undo or Redo any changes made to the board.",
+        "Announcements from teacher to students",
+      ],
+      futurePlans:[
+        "More accessible UX for using a smartphone or tablet",
+        "'Homework' mode that allows teacher to assign a task to students and collect their work after class",
+        "More whiteboard tools such as shapes, textbox, and more",
+      ],
+      icon: "🖊️",
+      image: "projects/conteng.png",
+      status: "Live",
+      private:true,
+      technologies: ["Vue","Node.js","Nest.js","MongoDB","Websocket","Bootstrap","Netlify","AWS EC2","Git","Jenkins"],
+      liveUrl: "https://conteng.safwanzarif.dev",
+      //githubUrl: "https://github.com/msafwanzarif",
+      
+    },
+    {
       title: "Smart Parking System",
       description: "Won the faculty's Best Final Year Project in 2019. Designed a smart parking system that focus on Real Time Parking Map Status Display for admins and users. This project is in collaboration with TM One",
       features:[
@@ -172,39 +199,13 @@ export const portfolioConfig = {
         "Automated calculation of parking fees",
       ],
       icon: "🚗",
-      image: "", // Add your project screenshot here
+      image: "projects/smart_parking.png", // Add your project screenshot here
       status: "Archived",
       private: false,
       technologies: ["Expo", "React Native", "Node.js", "PostgreSQL","Heroku"],
       githubUrl: "https://github.com/msafwanzarif/fypv0",
       
     },
-    // {
-    //   title: "Conteng",
-    //   description: "Personal Timer with minimal design that aims to boost productivity. Based on Pomodoro Timer with more flexibility that cater to users' habits and behaviour",
-    //   features:[
-    //     "Minimalist design for distraction-free focus",
-    //     "Customizable timer settings compatible with <i>Pomodoro</i> template",
-    //     "Focus and Break time with <i>Overtime</i> flexibility",
-    //     "Notifications between sessions",
-    //     "Daily automatic reset and Motivational Quote",
-    //     "Closable persistent timer",
-    //     "Built for web, desktop and mobile",
-    //   ],
-    //   futurePlans:[
-    //     "Ability to customize and track productivity goals",
-    //     "Syncing of timer data across devices",
-    //     "Social sharing of status and achievements",
-    //   ],
-    //   icon: "🕒",
-    //   image: "projects/image.png",
-    //   status: "Live",
-    //   private:false,
-    //   technologies: ["Vue","Tauri","Bootstrap","Netlify"],
-    //   liveUrl: "https://fokus.safwanzarif.dev",
-    //   githubUrl: "https://github.com/msafwanzarif/fokus-masa-anda",
-      
-    // },
     {
       title: "FOKUS",
       description: "Personal Timer with minimal design that aims to boost productivity. Based on Pomodoro Timer with more flexibility that cater to users' habits and behaviour",
@@ -223,7 +224,7 @@ export const portfolioConfig = {
         "Social sharing of status and achievements",
       ],
       icon: "🕒",
-      image: "projects/image.png",
+      image: "projects/fokus.png",
       status: "Live",
       private:false,
       technologies: ["Vue","Tauri","Bootstrap","Netlify"],

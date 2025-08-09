@@ -43,9 +43,13 @@
                    class="w-8 h-8 rounded-full flex items-center justify-center bg-gray-100/75 dark:bg-gray-800/75 dark:hover:bg-gray-500 text-dev-accent hover:bg-dev-accent hover:text-white transition-colors">
                   <i class="bi bi-box-arrow-up-right"></i>
                 </a>
-                <a v-if="project.githubUrl" :href="project.githubUrl" target="_blank"
-                   class="w-8 h-8 rounded-full flex items-center justify-center bg-gray-100/75 dark:bg-gray-800/75 dark:hover:bg-gray-500 text-dev-accent hover:bg-dev-accent hover:text-white transition-colors">
+                <a v-if="project.githubUrl" :href="project.githubUrl" target="_blank" :disabled="project.private" :class="{'hover:bg-dev-accent text-dev-accent':!project.private}"
+                   class="relative w-8 h-8 rounded-full flex items-center justify-center bg-gray-100/75 dark:bg-gray-800/75 dark:hover:bg-gray-500   hover:text-white transition-colors group/inside">
                   <i class="bi bi-git text-dev-accent"></i>
+                  <div v-if="project.private" class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-gray-900 dark:bg-gray-700 text-white text-xs rounded opacity-0 group-hover/inside:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
+                Private Repo
+                <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-gray-900 dark:border-t-gray-700"></div>
+              </div>
                 </a>
               </div>
             </div>
