@@ -8,7 +8,6 @@ export const portfolioConfig = {
     title: "Software Application Specialist",
     bio: "Problem-solving enthusiast with <b>over 5 years of experience</b> in Full-stack Software Application Development, <b>specializing in Web App Integration and Backend Development.</b>",
     email: email,
-    phone: "018 6644 723",
     location: "Cyberjaya, Malaysia",
     profileImage: "/profile.jpg", // Add your profile image to /public folder
   },
@@ -164,20 +163,69 @@ export const portfolioConfig = {
   projects: [
     {
       title: "Smart Parking System",
-      description: "Final Year Project that Won Best Project in 2019. Designed a parking system that focus on Real Time Parking Map Status Display in collaboration with TM One",
-      icon: "🛒",
+      description: "Won the faculty's Best Final Year Project in 2019. Designed a smart parking system that focus on Real Time Parking Map Status Display for admins and users. This project is in collaboration with TM One",
+      features:[
+        "Real-time parking map display",
+        "Usage of users' QR code to access parking area",
+        "Admin dashboard to add new parking, and manage their fees, availability and status",
+        "Dashboard display to monitor parking and vehicle entries",
+        "Automated calculation of parking fees",
+      ],
+      icon: "🚗",
       image: "", // Add your project screenshot here
       status: "Archived",
+      private: false,
       technologies: ["Expo", "React Native", "Node.js", "PostgreSQL","Heroku"],
       githubUrl: "https://github.com/msafwanzarif/fypv0",
       
     },
+    // {
+    //   title: "Conteng",
+    //   description: "Personal Timer with minimal design that aims to boost productivity. Based on Pomodoro Timer with more flexibility that cater to users' habits and behaviour",
+    //   features:[
+    //     "Minimalist design for distraction-free focus",
+    //     "Customizable timer settings compatible with <i>Pomodoro</i> template",
+    //     "Focus and Break time with <i>Overtime</i> flexibility",
+    //     "Notifications between sessions",
+    //     "Daily automatic reset and Motivational Quote",
+    //     "Closable persistent timer",
+    //     "Built for web, desktop and mobile",
+    //   ],
+    //   futurePlans:[
+    //     "Ability to customize and track productivity goals",
+    //     "Syncing of timer data across devices",
+    //     "Social sharing of status and achievements",
+    //   ],
+    //   icon: "🕒",
+    //   image: "projects/image.png",
+    //   status: "Live",
+    //   private:false,
+    //   technologies: ["Vue","Tauri","Bootstrap","Netlify"],
+    //   liveUrl: "https://fokus.safwanzarif.dev",
+    //   githubUrl: "https://github.com/msafwanzarif/fokus-masa-anda",
+      
+    // },
     {
       title: "FOKUS",
       description: "Personal Timer with minimal design that aims to boost productivity. Based on Pomodoro Timer with more flexibility that cater to users' habits and behaviour",
-      icon: "Car",
-      image: "projects/image.png", // Add your project screenshot here
+      features:[
+        "Minimalist design for distraction-free focus",
+        "Customizable timer settings compatible with <i>Pomodoro</i> template",
+        "Focus and Break time with <i>Overtime</i> flexibility",
+        "Notifications between sessions",
+        "Daily automatic reset and Motivational Quote",
+        "Closable persistent timer",
+        "Built for web, desktop and mobile",
+      ],
+      futurePlans:[
+        "Ability to customize and track productivity goals",
+        "Syncing of timer data across devices",
+        "Social sharing of status and achievements",
+      ],
+      icon: "🕒",
+      image: "projects/image.png",
       status: "Live",
+      private:false,
       technologies: ["Vue","Tauri","Bootstrap","Netlify"],
       liveUrl: "https://fokus.safwanzarif.dev",
       githubUrl: "https://github.com/msafwanzarif/fokus-masa-anda",
