@@ -232,6 +232,28 @@ export const portfolioConfig = {
       githubUrl: "https://github.com/msafwanzarif/fokus-masa-anda",
       
     },
+    {
+      title: "JemputDatang.my",
+      description: "For my wedding, I decided to build my own e-invitation card, with added features on top of the normal e-card features we see out there. The most important feature is the personalized RSVP card for invited guests",
+      features:[
+        "E-card of the same design but with variation for the bride and groom for our combined event. <a class='text-dev-accent' href='https://jemputan.safwanzarif.dev/safwan' target='_blank'>Groom Card</a> | <a class='text-dev-accent' href='https://jemputan.safwanzarif.dev/ahza' target='_blank'>Bride Card</a>",
+        "Conventional e-card features including RSVP, Guestbook, Location",
+        "Guestbook with specific recipient and ability to make it private",
+        "Specialized RSVP card for specific invited guest, with simple UX to manage them. <a class='text-dev-accent' href='https://jemputan.safwanzarif.dev/jemputan' target='_blank'>See it in action</a>",
+        "Easy sharing of the e-card link through WhatsApp with a mobile layout 'Invite Dashboard'. <a class='text-dev-accent' href='https://jemputan.safwanzarif.dev/invite' target='_blank'>See it in action</a>",
+        "Configured the thumbnail and preview for the e-card link to be shared on WhatsApp",
+      ],
+      futurePlans:[
+        "Ability to customize content and deploy your own e-card folowing the same template",
+        "Gift registry feature"
+      ],
+      icon: "💌",
+      image: "projects/jemputan.png",
+      status: "Live",
+      private:false,
+      technologies: ["Vue","Vike","Bootstrap","Firestore","Netlify"],
+      liveUrl: "https://jemputan.safwanzarif.dev"
+    },
   ]
 };
 
