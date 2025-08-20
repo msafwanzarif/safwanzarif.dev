@@ -21,20 +21,6 @@
 
         <!-- Contact Info -->
         <div class="px-8">
-          <!-- <div class="space-y-2">
-            <div class="flex items-center space-x-3">
-              <span class="text-dev-accent dark:text-dev-accent">📧</span>
-              <span class="text-sm">{{ config.personal.email }}</span>
-            </div>
-            <div class="flex items-center space-x-3">
-              <span class="text-dev-accent dark:text-dev-accent">📱</span>
-              <span class="text-sm">{{ config.personal.phone }}</span>
-            </div>
-            <div class="flex items-center space-x-3">
-              <span class="text-dev-accent dark:text-dev-accent">📍</span>
-              <span class="text-sm">{{ config.personal.location }}</span>
-            </div>
-                   </div> -->
 
           <!-- Social Links -->
           <div class="flex items-center justify-center space-x-3 mt-4">

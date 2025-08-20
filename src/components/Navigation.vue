@@ -57,7 +57,6 @@ import portfolioConfig from '../config/portfolio.js'
 const config = computed(() => portfolioConfig)
 
 const mobileMenuOpen = ref(false)
-const showMobileProfile = ref(false)
 const activeSection = ref('profile')
 
 const sections = [

@@ -33,23 +33,15 @@ export const portfolioConfig = {
       company: "iLaunch Sdn Bhd, Shah Alam",
       duration: "February 2022 – Present",
       descriptions: [
+        "<b>Led developer teams as Scrum Master </b>, improving team cohesion, enhancing communication with the project manager, and increasing velocity by 10%",
         "Developed solutions for a <b>feedback management system</b> and a professional board's <b>forms and financial management system</b>, ensuring they meet web and mobile applications requirements",
         "Researched and developed solutions for <b>new feature requests</b>, including <b>custom implementations</b> and <b>third-party integrations</b>, and presented findings and proposals to team members",
         "Collaborated with project managers and analysts to <b>design effective data structures and UX approaches</b> for specific requirements, while actively identifying and discussing potential risks",
         "<b>Conducted a web development workshop as a trainer</b>, introducing the technologies used in our projects to the client",
+        "Reduced <b>user-tested rejection rate by 75% by clearly identifying and communicating</b> design limitations as well as outlining its advantages to clients, offering effective alternatives where needed",
+        "<b>Managed and trained five groups of internship students</b> from various local universities on the complete application development workflow, including requirements gathering, full-stack development, manual and automated testing, debugging, and deployment",
       ],
-      technologies: ["Vue", "Nest.js", "MySQL", "Spring", "Oracle DB", "Flutter", "SVN", "TypeScript","Java", "Dart", "Bootstrap", "NGINX"]
-    },
-    {
-      title: "Interns Supervisor",
-      company: "iLaunch Sdn Bhd, Shah Alam",
-      duration: "March 2022 – April 2025",
-      descriptions: [
-        "Guided and managed <b>multiple groups of internship students</b> from various local universities throughout their training period",
-        "Trained them on the <b>complete application development workflow</b>, including requirements gathering, full-stack development, testing, debugging, and deployment",
-        "Assigned <b>real project tasks</b> and facilitated team progress using <b>agile methods</b>, ensuring hands-on experience while <b>supporting effective collaboration and timely milestone completion</b>"
-      ],
-      technologies: ["Vue", "Node.js", "Nest.js", "Flutter", "MySQL", "JIRA", "Notion", "Insomnia", "Netlify", "DigitalOcean", "SVN", "Bootstrap", "TypeScript", "Dart"]
+      technologies: ["Vue", "Nest.js", "Node.js", "MySQL", "Spring", "Oracle DB", "Flutter", "SVN", "TypeScript","Java", "Dart", "Bootstrap", "NGINX", "Netlify", "DigitalOcean", "SVN","JIRA","Notion"]
     },
     {
       title: "Technical Team Lead",
@@ -115,50 +107,6 @@ export const portfolioConfig = {
     }
   ],
 
-  // Technical Skills with proficiency levels
-  skillCategories: [
-    {
-      name: "Frontend",
-      icon: "🎨",
-      skills: [
-        { name: "Vue.js", level: 95 },
-        { name: "React", level: 90 },
-        { name: "TypeScript", level: 88 },
-        { name: "Tailwind CSS", level: 92 }
-      ]
-    },
-    {
-      name: "Backend",
-      icon: "⚙️",
-      skills: [
-        { name: "Node.js", level: 90 },
-        { name: "Python", level: 85 },
-        { name: "PostgreSQL", level: 88 },
-        { name: "MongoDB", level: 82 }
-      ]
-    },
-    {
-      name: "DevOps",
-      icon: "🚀",
-      skills: [
-        { name: "Docker", level: 85 },
-        { name: "AWS", level: 80 },
-        { name: "CI/CD", level: 83 },
-        { name: "Kubernetes", level: 75 }
-      ]
-    },
-    {
-      name: "Tools",
-      icon: "🔧",
-      skills: [
-        { name: "Git", level: 95 },
-        { name: "VS Code", level: 98 },
-        { name: "Figma", level: 78 },
-        { name: "Postman", level: 85 }
-      ]
-    }
-  ],
-
   // Featured Projects
   projects: [
     {
@@ -189,21 +137,33 @@ export const portfolioConfig = {
       
     },
     {
-      title: "Smart Parking System",
-      description: "Won the faculty's Best Final Year Project in 2019. Designed a smart parking system that focus on Real Time Parking Map Status Display for admins and users. This project is in collaboration with TM One",
+      title: "SZUtils.vue",
+      description: "An NPM package that is developed to have multiple useful Vue composables to be reused in multiple future projects to simplify common and repetitive computations. Published with documentation and comprehensive Demo.Started with productivity focused features.",
       features:[
-        "Real-time parking map display",
-        "Usage of users' QR code to access parking area",
-        "Admin dashboard to add new parking, and manage their fees, availability and status",
-        "Dashboard display to monitor parking and vehicle entries",
-        "Automated calculation of parking fees",
+        "useDuration - A reactive Luxon-based stopwatch/timer with real-time tracking support",
+        "useDurationDisplay - Format and display durations in a readable way",
+        "DurationDisplay - Packaged useDurationDisplay as a renderless component for quicker simple usage on UI",
+        "useTimeTracker - Track how much time has been spent doing something — session-by-session or continuously",
+        "useHabitTracker - A powerful daily/weekly/monthly habit tracker with goal setting, breaks, off-days, and personal best tracking",
+        "useMetas - Reactive metadata management for composables and utilities",
+        "useTimer - Simple interval-based timer composable",
+        "useTimeTick - Reactive ticking composable for time-based updates",
+        "useTimeTickShared - Shared ticking composable for global time updates across components",
+        "useFirebaseDb - Firebase Firestore database integration composable",
+        "useFirebaseDoc - Reactive Firestore document management composable with real-time synchronization",
+        "generateId - Utility function to generate unique IDs",
       ],
-      icon: "🚗",
-      image: "projects/smart_parking.png", // Add your project screenshot here
-      status: "Archived",
+      futurePlans:[
+        "useCountdown, usePiniaSync",
+        "Package more composable as renderless components",
+      ],
+      icon: "📦",
+      image: "projects/szutils.png", // Add your project screenshot here
+      status: "Published",
       private: false,
-      technologies: ["Expo", "React Native", "Node.js", "PostgreSQL","Heroku"],
-      githubUrl: "https://github.com/msafwanzarif/fypv0",
+      technologies: ["Vue", "NPM", "Firebase", "Cloud Firestore","Luxon", "Bootstrap"],
+      githubUrl: "https://github.com/msafwanzarif/szutils.vue",
+      liveUrl: "https://www.npmjs.com/package/szutils.vue",
       
     },
     {
@@ -253,6 +213,24 @@ export const portfolioConfig = {
       private:false,
       technologies: ["Vue","Vike","Bootstrap","Firestore","Netlify"],
       liveUrl: "https://jemputan.safwanzarif.dev"
+    },
+    {
+      title: "Smart Parking System",
+      description: "Won the faculty's Best Final Year Project in 2019. Designed a smart parking system that focus on Real Time Parking Map Status Display for admins and users. This project is in collaboration with TM One",
+      features:[
+        "Real-time parking map display",
+        "Usage of users' QR code to access parking area",
+        "Admin dashboard to add new parking, and manage their fees, availability and status",
+        "Dashboard display to monitor parking and vehicle entries",
+        "Automated calculation of parking fees",
+      ],
+      icon: "🚗",
+      image: "projects/smart_parking.png", // Add your project screenshot here
+      status: "Archived",
+      private: false,
+      technologies: ["Expo", "React Native", "Node.js", "PostgreSQL","Heroku"],
+      githubUrl: "https://github.com/msafwanzarif/fypv0",
+      
     },
   ]
 };
