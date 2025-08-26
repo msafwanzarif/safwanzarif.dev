@@ -176,11 +176,12 @@ export const portfolioConfig = {
         "Notifications between sessions",
         "Daily automatic reset and Motivational Quote",
         "Closable persistent timer",
-        "Built for web, desktop and mobile",
+        "Set up PWA so users can install it on their devices",
+        "Syncing of timer data across devices with Google Login",
+        "Goal module where users can set and track their productivity goals"
       ],
       futurePlans:[
-        "Ability to customize and track productivity goals",
-        "Syncing of timer data across devices",
+        "More Goal Modules feature like adding custom goals and setting time off",
         "Social sharing of status and achievements",
       ],
       icon: "🕒",
