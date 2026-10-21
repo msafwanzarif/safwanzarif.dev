@@ -5,8 +5,8 @@ export const portfolioConfig = {
   // Personal Information
   personal: {
     name: "Safwan Zarif",
-    title: "Software Application Specialist",
-    bio: "Problem-solving enthusiast with <b>over 5 years of experience</b> in Full-stack Software Application Development, <b>specializing in Web App Integration and Backend Development.</b>",
+    title: "Full Stack Software Developer",
+    bio: "Problem-solving enthusiast with <b>over 6 years of experience</b> in Full-stack Software Development, <b>specializing in RESTful API Development, Backend Systems and Web App Integration.</b>",
     email: email,
     location: "Cyberjaya, Malaysia",
     profileImage: "/profile.jpg", // Add your profile image to /public folder
@@ -22,33 +22,53 @@ export const portfolioConfig = {
 
   // Core Skills (shown in profile panel)
   coreSkills: [
-    "Node.js","Nest.js", "Vue", "React", 
-    "MySQL", "MongoDB", "Python", "AWS"
+    "Nest.js", "Node.js", "TypeScript", "Vue",
+    "Angular", "MySQL", "Docker", "AWS"
   ],
 
   // Work Experience
   experiences: [
     {
-      title: "Software Application Specialist",
+      title: "Full Stack Developer",
+      company: "Siiru Tech Sdn Bhd (Remote)",
+      duration: "October 2025 – Present",
+      descriptions: [
+        "<b>Design, develop and maintain the backend of a multi-vendor booking service</b> on Siiru's microservices architecture, covering <b>six vastly different product types</b> (Mutawwif, Transport, Waqaf, Visa, Insurance, Qurban), each with at least one vendor and more in development, including <b>third-party integrations</b>",
+        "Build and maintain <b>500+ API endpoints and 8 cron jobs</b>; keep simple queries <b>under 100 ms</b> and heavy join and aggregate queries over thousands of records <b>under 500 ms</b>, including bulk inserts of 600+ rows in a single API call",
+        "Protect data integrity across multi-step booking flows with <b>ACID-compliant transactions</b>, and prevent double-booking of limited vendor inventory with <b>locking and idempotency keys</b> so concurrent and retried requests do not create duplicate bookings",
+        "Secure APIs with <b>JWT and OAuth</b> authentication and <b>role-based access control</b> for three groups: Admin, App User (customer), and Vendor/Operator (Mutawwif, driver, transport company, Qurban vendor, Waqaf vendor, insurance admin)",
+        "Tuned a heavy query from <b>almost 2 seconds to under 500 ms</b> by redesigning it with effective subqueries",
+        "Develop the new <b>vendor CMS</b> (Vue, TypeScript; 65+ pages, 40+ reusable components), maintain the <b>Angular admin CMS</b> (100+ pages, 40+ reusable components; 10+ pages built personally), and integrate the APIs with both and the Siiru mobile application (Angular, Ionic)",
+        "Maintain <b>20+ repositories</b>, each a microservice node with its own <b>CI/CD pipeline</b>; cut full deployment time from push to live from <b>10–15 minutes to under 2 minutes</b>, with rollback through Docker image replacement in Kubernetes",
+        "Use <b>AI-assisted tools</b> in the workflow: Claude for planning, and Codex and Antigravity for executing implementation from pseudocode, boilerplating, building MVPs and writing tests",
+        "Review colleagues' code, and write and maintain the <b>Swagger (OpenAPI) documentation</b> that team members and contract freelancers rely on to build against the platform",
+        "Use <b>Drizzle ORM</b> for the vendor booking APIs and <b>TypeORM</b> across many of the other backend microservices, on MySQL",
+        "Work with the design team in grooming sessions to keep UX implementation robust and aligned with technical requirements, raising gaps with clear options and plans",
+      ],
+      technologies: ["Nest.js", "TypeScript", "MySQL", "Drizzle", "TypeORM", "Vue", "Angular", "Ionic", "Swagger", "Docker", "Kubernetes", "GitHub Actions", "DigitalOcean"]
+    },
+    {
+      title: "Full Stack Developer",
       company: "iLaunch Sdn Bhd, Shah Alam",
-      duration: "February 2022 – Present",
+      duration: "February 2022 – October 2025",
       descriptions: [
         "<b>Led developer teams as Scrum Master </b>, improving team cohesion, enhancing communication with the project manager, and increasing velocity by 10%",
-        "Developed solutions for a <b>feedback management system</b> and a professional board's <b>forms and financial management system</b>, ensuring they meet web and mobile applications requirements",
-        "Researched and developed solutions for <b>new feature requests</b>, including <b>custom implementations</b> and <b>third-party integrations</b>, and presented findings and proposals to team members",
+        "Developed solutions for a <b>feedback management system</b> and a professional board's <b>forms and financial management system</b>, ensuring they meet web and mobile applications requirements, with <b>Prisma ORM</b> for data modelling and querying",
+        "<b>Built testing into every project</b>, reviewed colleagues' code, and ran an <b>application testing workshop on Selenium IDE</b>",
+        "Researched and developed solutions for <b>new feature requests</b>, including <b>custom implementations</b> and <b>third-party integrations</b>, and presented findings and proposals to team members; shared internal how-to guides that cut team development time by 20%",
         "Collaborated with project managers and analysts to <b>design effective data structures and UX approaches</b> for specific requirements, while actively identifying and discussing potential risks",
         "<b>Conducted a web development workshop as a trainer</b>, introducing the technologies used in our projects to the client",
         "Reduced <b>user-tested rejection rate by 75% by clearly identifying and communicating</b> design limitations as well as outlining its advantages to clients, offering effective alternatives where needed",
         "<b>Managed and trained five groups of internship students</b> from various local universities on the complete application development workflow, including requirements gathering, full-stack development, manual and automated testing, debugging, and deployment",
       ],
-      technologies: ["Vue", "Nest.js", "Node.js", "MySQL", "Spring", "Oracle DB", "Flutter", "SVN", "TypeScript","Java", "Dart", "Bootstrap", "NGINX", "Netlify", "DigitalOcean", "SVN","JIRA","Notion"]
+      technologies: ["Vue", "Nest.js", "Node.js", "Prisma", "MySQL", "Spring", "Oracle DB", "Flutter", "Selenium", "SVN", "TypeScript", "Java", "Dart", "Bootstrap", "NGINX", "Netlify", "DigitalOcean", "JIRA", "Notion"]
     },
     {
       title: "Technical Team Lead",
       company: "Azure Innovations Sdn Bhd, Kuala Lumpur",
       duration: "April 2021 – January 2022",
       descriptions: [
-        "Led a team of <b>multinational developers</b> in delivering new features and requirements while maintaining a suite of web and mobile applications for a <b>major Malaysian telco company</b>",
+        "Led a team of <b>multinational developers</b>, working with colleagues in <b>Pakistan and the Philippines</b>, in delivering new features and requirements while maintaining a suite of web and mobile applications for a <b>major Malaysian telco company</b>",
         "Reviewed and designed solutions involving <b>e-commerce implementation</b>, <b>ads and reward system</b>, <b>Buy Now Pay Later implementation</b> and <b>courier service integration</b>",
         "Collaborated closely with Project Managers to manage client technical requests and expectations, <b>providing effort estimations and risk analysis</b>",
       ],
@@ -60,7 +80,7 @@ export const portfolioConfig = {
       duration: "March 2020 – March 2021",
       descriptions: [
         "Focused on <b>data management and computation</b> for an inventory and content management system tailored for <b>B2B clients</b>",
-        "Handled <b>on-call reports and incidents response</b>, providing prompt analysis and coming up with effective debugging strategy to be implemented"
+        "Handled <b>on-call reports and incidents response</b>, providing prompt analysis and coming up with effective debugging strategy to be implemented, meeting 100% of deadlines and SLAs"
       ],
       technologies: ["Laravel", "Node.js", "MySQL", "MongoDB", "Postman", "JIRA", "PHP", "Javascript"]
     }
@@ -71,9 +91,9 @@ export const portfolioConfig = {
     {
       degree: "Bachelor of Computer Science (Hons.) Specializing in Information System",
       institution: "Multimedia University, Cyberjaya",
-      year: "2016 - 2020",
+      year: "2016 - 2021",
       result:"CGPA : 3.71",
-      description: "Won Best Final Year Project. Focused on elective subjects with technical application including Artificial Intelligence, Algorithm, Compiler Design and Data Mining."
+      description: "Won Best Final Year Project and the Book Award. Focused on elective subjects with technical application including Artificial Intelligence, Algorithm, Compiler Design and Data Mining."
     },
     {
       degree: "International Baccalaureate (Engineering)",
@@ -205,7 +225,7 @@ export const portfolioConfig = {
         "Configured the thumbnail and preview for the e-card link to be shared on WhatsApp",
       ],
       futurePlans:[
-        "Ability to customize content and deploy your own e-card folowing the same template",
+        "Ability to customize content and deploy your own e-card following the same template",
         "Gift registry feature"
       ],
       icon: "💌",
